@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://www.21connectdigital.agency/og-image.jpg", // replace with your image if you have one
+        url: "https://www.21connectdigital.agency/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "21 Connect Digital Agency",
@@ -44,14 +44,13 @@ export const metadata: Metadata = {
     title: "21 Connect Digital | Web Design, AI & SEO for Small Businesses",
     description:
       "NYC-based agency providing web design, AI integration, and SEO services for startups and small businesses.",
-    images: ["https://www.21connectdigital.agency/og-image.jpg"], // replace if needed
+    images: ["https://www.21connectdigital.agency/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
   },
     generator: 'v0.app'
 }
-
 
 export default function RootLayout({
   children,
