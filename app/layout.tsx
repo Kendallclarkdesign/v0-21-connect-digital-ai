@@ -21,6 +21,16 @@ export const metadata: Metadata = {
     "digital marketing",
     "website maintenance",
     "branding and UX design",
+    "Bucks County web design",
+    "Hunterdon County SEO",
+    "Orange County CA web design",
+    "Los Angeles digital agency",
+    "Westchester NY web design",
+    "contractor marketing",
+    "HVAC web design",
+    "plumbing website design",
+    "local business SEO",
+    "21 Connect Digital"
   ],
   openGraph: {
     title: "21 Connect Digital | Web Design, AI Solutions & SEO",
@@ -51,6 +61,7 @@ export const metadata: Metadata = {
   },
     generator: 'v0.app'
 }
+
 
 export default function RootLayout({
   children,

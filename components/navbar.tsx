@@ -47,6 +47,12 @@ export function Navbar() {
             >
               Services
             </button>
+            <Link
+              href="/locations"
+              className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
+            >
+              Our Service Areas
+            </Link>
             <button
               onClick={() => scrollToSection("pricing")}
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
@@ -97,6 +103,13 @@ export function Navbar() {
               >
                 Services
               </button>
+              <Link
+                href="/locations"
+                onClick={() => setIsOpen(false)}
+                className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
+              >
+                Our Service Areas
+              </Link>
               <button
                 onClick={() => scrollToSection("pricing")}
                 className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"

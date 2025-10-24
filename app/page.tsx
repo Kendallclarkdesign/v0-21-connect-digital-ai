@@ -19,7 +19,7 @@ import {
 } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { TestimonialSlider } from "@/components/testimonial-slider"
-import { CountdownTimer } from "@/components/countdown-timer"
+// import { CountdownTimer } from "@/components/countdown-timer"
 
 export default function Home() {
   return (
@@ -265,7 +265,7 @@ export default function Home() {
               Choose the plan that fits your business needs. All plans include hosting, maintenance, and support.
             </p>
           </div>
-          <CountdownTimer />
+          {/* <CountdownTimer /> */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg rounded-3xl bg-card">
               <CardContent className="pt-10 pb-10 px-8 space-y-4">
