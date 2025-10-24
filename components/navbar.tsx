@@ -28,7 +28,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-6">
             <button
               onClick={() => scrollToSection("hero")}
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
@@ -76,14 +76,14 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground" aria-label="Toggle menu">
+          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-foreground" aria-label="Toggle menu">
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-6 border-t border-border">
+          <div className="lg:hidden py-6 border-t border-border">
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection("hero")}
