@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "HVAC web design",
     "plumbing website design",
     "local business SEO",
-    "21 Connect Digital"
+    "21 Connect Digital",
   ],
   openGraph: {
     title: "21 Connect Digital | Web Design, AI Solutions & SEO",
@@ -62,14 +62,43 @@ export const metadata: Metadata = {
     generator: 'v0.app'
 }
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "21 Connect Digital",
+    image: "https://www.21connectdigital.agency/logo.png",
+    url: "https://www.21connectdigital.agency",
+    telephone: "+1-213-399-3200",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "New York",
+      addressRegion: "NY",
+      addressCountry: "US",
+    },
+    priceRange: "$$",
+    description:
+      "NYC-based digital agency helping small businesses and startups with web design, SEO, and AI automation.",
+    areaServed: [
+      "New York City, NY",
+      "Bucks County, PA",
+      "Hunterdon County, NJ",
+      "Westchester, NY",
+      "Orange County, CA",
+      "Los Angeles, CA",
+    ],
+    sameAs: ["https://www.facebook.com/21connectdigtial", "https://www.linkedin.com/company/21-connect-digital/"],
+  }
+
   return (
     <html lang="en">
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
