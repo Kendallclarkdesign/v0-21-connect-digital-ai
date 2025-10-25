@@ -4,16 +4,23 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setIsOpen(false)
+  const handleNavClick = (sectionId: string) => {
+    setIsOpen(false)
+
+    // If we're on the homepage, scroll to section
+    if (pathname === "/") {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
     }
+    // If we're on another page, the Link href will handle navigation
   }
 
   return (
@@ -29,42 +36,47 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            <button
-              onClick={() => scrollToSection("hero")}
+            <Link
+              href="/#hero"
+              onClick={() => handleNavClick("hero")}
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection("why-us")}
+            </Link>
+            <Link
+              href="/#why-us"
+              onClick={() => handleNavClick("why-us")}
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
             >
               Why Us
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
+            </Link>
+            <Link
+              href="/#services"
+              onClick={() => handleNavClick("services")}
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
             >
               Services
-            </button>
+            </Link>
             <Link
               href="/locations"
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
             >
               Our Service Areas
             </Link>
-            <button
-              onClick={() => scrollToSection("pricing")}
+            <Link
+              href="/#pricing"
+              onClick={() => handleNavClick("pricing")}
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
             >
               Pricing
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
+            </Link>
+            <Link
+              href="/#contact"
+              onClick={() => handleNavClick("contact")}
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
             >
               Contact
-            </button>
+            </Link>
             <Button
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 rounded-full px-6 py-2 text-sm font-medium shadow-sm hover:shadow-md"
@@ -85,24 +97,27 @@ export function Navbar() {
         {isOpen && (
           <div className="lg:hidden py-6 border-t border-border">
             <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("hero")}
+              <Link
+                href="/#hero"
+                onClick={() => handleNavClick("hero")}
                 className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection("why-us")}
+              </Link>
+              <Link
+                href="/#why-us"
+                onClick={() => handleNavClick("why-us")}
                 className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
               >
                 Why Us
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
+              </Link>
+              <Link
+                href="/#services"
+                onClick={() => handleNavClick("services")}
                 className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
               >
                 Services
-              </button>
+              </Link>
               <Link
                 href="/locations"
                 onClick={() => setIsOpen(false)}
@@ -110,18 +125,20 @@ export function Navbar() {
               >
                 Our Service Areas
               </Link>
-              <button
-                onClick={() => scrollToSection("pricing")}
+              <Link
+                href="/#pricing"
+                onClick={() => handleNavClick("pricing")}
                 className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
               >
                 Pricing
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
+              </Link>
+              <Link
+                href="/#contact"
+                onClick={() => handleNavClick("contact")}
                 className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
               >
                 Contact
-              </button>
+              </Link>
               <Button
                 asChild
                 className="bg-primary hover:bg-primary/90 text-primary-foreground w-full rounded-full mt-2"
