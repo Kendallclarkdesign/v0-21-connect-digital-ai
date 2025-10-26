@@ -99,6 +99,18 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDRT0L20ML"></script>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TDRT0L20ML', { send_page_view: true });
+    `,
+  }}
+/>
+
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-TDRT0L20ML" strategy="afterInteractive" />

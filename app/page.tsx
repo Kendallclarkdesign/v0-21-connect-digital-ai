@@ -577,7 +577,20 @@ export default function Home() {
           </div>
           <Card className="border border-border shadow-lg rounded-3xl bg-card">
             <CardContent className="pt-10 pb-10 px-10">
-              <form action="https://formspree.io/f/mjkargbe" method="POST" className="space-y-8">
+             <form
+  action="https://formspree.io/f/mjkargbe"
+  method="POST"
+  onSubmit={() => {
+    if (window.gtag) {
+      window.gtag('event', 'form_submission', {
+        event_category: 'Lead',
+        event_label: 'Contact Form - 21 Connect Digital',
+      });
+    }
+  }}
+  className="space-y-8"
+>
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-3">
                     Email Address
