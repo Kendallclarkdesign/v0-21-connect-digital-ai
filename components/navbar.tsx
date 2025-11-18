@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X } from 'lucide-react'
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname } from 'next/navigation'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -56,6 +56,13 @@ export function Navbar() {
               className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
             >
               Services
+            </Link>
+            <Link
+              href="/#work"
+              onClick={() => handleNavClick("work")}
+              className="text-sm text-foreground/70 hover:text-foreground font-medium transition-colors"
+            >
+              Our Work
             </Link>
             <Link
               href="/locations"
@@ -117,6 +124,13 @@ export function Navbar() {
                 className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
               >
                 Services
+              </Link>
+              <Link
+                href="/#work"
+                onClick={() => handleNavClick("work")}
+                className="text-foreground/70 hover:text-foreground font-medium transition-colors text-left py-2"
+              >
+                Our Work
               </Link>
               <Link
                 href="/locations"

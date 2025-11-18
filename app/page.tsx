@@ -1,20 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Globe,
-  Palette,
-  Search,
-  Code,
-  Smartphone,
-  BarChart,
-  Zap,
-  Users,
-  Award,
-  Brain,
-  TrendingUp,
-  Linkedin,
-  Facebook,
-} from "lucide-react"
+import { Globe, Palette, Search, Code, Smartphone, BarChart, Zap, Users, Award, Brain, TrendingUp, Linkedin, Facebook } from 'lucide-react'
 import { Navbar } from "@/components/navbar"
 import { TestimonialSlider } from "@/components/testimonial-slider"
 import { ContactForm } from "@/components/contact-form"
@@ -70,7 +56,7 @@ export default function Home() {
               but drive real results.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed font-light">
-              We&#39;re not just developers we&#39;re your digital partners, committed to your long-term success.
+              We're not just developers we're your digital partners, committed to your long-term success.
             </p>
           </div>
         </div>
@@ -250,6 +236,102 @@ export default function Home() {
             </p>
           </div>
           <TestimonialSlider />
+        </div>
+      </section>
+
+      <section id="work" className="py-32 px-6 bg-muted">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-6 font-medium">Our Work</p>
+            <h2 className="text-5xl md:text-6xl font-serif font-semibold mb-6 text-foreground tracking-tight">
+              Featured Projects
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+              Explore some of our most impactful web designs and digital solutions.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {/* Project 1: Haus of ALT */}
+            <Card className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg rounded-3xl bg-card overflow-hidden group">
+              <div className="relative h-64 md:h-80 bg-gradient-to-br from-primary/10 to-primary/5 overflow-hidden flex items-center justify-center">
+                <div className="text-center">
+                  <Globe className="w-16 h-16 text-primary/30 mx-auto mb-4" />
+                  <p className="text-muted-foreground text-sm">Fashion E-Commerce</p>
+                </div>
+              </div>
+              <CardContent className="pt-8 pb-8 px-8 space-y-4">
+                <div>
+                  <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2 font-medium">Fashion Brand</p>
+                  <h3 className="text-2xl font-serif font-semibold text-foreground">Haus of ALT</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed font-light">
+                  A striking e-commerce and event showcase site for an avant-garde fashion brand. Features dynamic event listings, immersive brand storytelling, and seamless product navigation.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-medium transition-all duration-300"
+                >
+                  <a href="https://www.hausofalt.com/" target="_blank" rel="noopener noreferrer">
+                    View Project
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Project 2: Max Noir */}
+            <Card className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg rounded-3xl bg-card overflow-hidden group">
+              <div className="relative h-64 md:h-80 bg-gradient-to-br from-primary/10 to-primary/5 overflow-hidden flex items-center justify-center">
+                <div className="text-center">
+                  <Palette className="w-16 h-16 text-primary/30 mx-auto mb-4" />
+                  <p className="text-muted-foreground text-sm">Artist Portfolio</p>
+                </div>
+              </div>
+              <CardContent className="pt-8 pb-8 px-8 space-y-4">
+                <div>
+                  <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2 font-medium">Artist Portfolio</p>
+                  <h3 className="text-2xl font-serif font-semibold text-foreground">Max Noir</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed font-light">
+                  An elegant portfolio site for an American artist and content creator. Showcases releases, media integrations, and personal branding with a clean, sophisticated design.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-medium transition-all duration-300"
+                >
+                  <a href="https://v0-artist-website-for-max-noir.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    View Project
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Project 3: DirtBusters Excavation */}
+            <Card className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg rounded-3xl bg-card overflow-hidden group">
+              <div className="relative h-64 md:h-80 bg-gradient-to-br from-primary/10 to-primary/5 overflow-hidden flex items-center justify-center">
+                <div className="text-center">
+                  <Code className="w-16 h-16 text-primary/30 mx-auto mb-4" />
+                  <p className="text-muted-foreground text-sm">Service Business</p>
+                </div>
+              </div>
+              <CardContent className="pt-8 pb-8 px-8 space-y-4">
+                <div>
+                  <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2 font-medium">Construction Services</p>
+                  <h3 className="text-2xl font-serif font-semibold text-foreground">DirtBusters</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed font-light">
+                  A professional service website for an excavation company. Features service showcase, project portfolio, and easy quote request system designed to drive local business growth.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-medium transition-all duration-300"
+                >
+                  <a href="https://www.dirtbustersexcavation.com/" target="_blank" rel="noopener noreferrer">
+                    View Project
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
